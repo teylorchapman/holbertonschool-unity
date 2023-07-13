@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
+    public Vector3 startPosition;
 
     private Rigidbody prb;
 
@@ -13,6 +14,7 @@ public class PlayerController : MonoBehaviour
     {
         prb = GetComponent<Rigidbody>();
         prb.constraints = RigidbodyConstraints.FreezeRotation;
+        startPosition = transform.position;
     }
 
     private void Update()
@@ -27,10 +29,22 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if (transform.position.y < -10f)
+        {
+            ResetPlayerPosition();
+        }
     }
 
     private void Jump()
     {
         prb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+    }
+
+    private void ResetPlayerPosition()
+    {
+        prb.velocity = Vector3.zero;
+        prb.angularVelocity = Vector3.zero;
+        transform.position = startPosition;
     }
 }
