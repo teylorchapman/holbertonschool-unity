@@ -2432,6 +2432,7 @@ GameObject:
   - component: {fileID: 2114201437}
   - component: {fileID: 2114201436}
   - component: {fileID: 2114201435}
+  - component: {fileID: 2114201438}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2505,6 +2506,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2114201438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114201434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0f5925427dd50c439935b1c0ab920e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &87060484102674959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2614,6 +2627,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1758684582}
     m_Modifications:
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2114201438}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Back
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OptionsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4067793913777727460, guid: 650e93c2192770a489eca4db5461a540, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6250207429722891708, guid: 650e93c2192770a489eca4db5461a540, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
