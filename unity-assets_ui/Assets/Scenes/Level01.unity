@@ -6385,6 +6385,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Resume
       objectReference: {fileID: 0}
+    - target: {fileID: 2961782733177618356, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
+      propertyPath: m_fontSize
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961782733177618356, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 36
+      objectReference: {fileID: 0}
     - target: {fileID: 2961782734381500985, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6472,6 +6480,10 @@ PrefabInstance:
     - target: {fileID: 2961782734381500989, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2961782734381500989, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7557f3fbad195b74d8c58a9788ad9452, type: 3}
