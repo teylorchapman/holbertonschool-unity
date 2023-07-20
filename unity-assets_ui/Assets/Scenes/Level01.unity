@@ -6059,7 +6059,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6953195906336263381, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1376101247}
+    - target: {fileID: 7873501036403809028, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1376101247}
     - target: {fileID: 7910323591937418806, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1376101247}
+    - target: {fileID: 8246203221654860188, guid: 9ded794d9e9775042b74329512210e06, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1376101247}

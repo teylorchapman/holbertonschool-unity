@@ -10,6 +10,7 @@ public class CameraController : MonoBehaviour
     public float minY = 0f;
     private Vector3 offset;
     private bool isRotating;
+    public bool isInverted = false;
     
 
     private void Start()
@@ -41,9 +42,17 @@ public class CameraController : MonoBehaviour
         if (isRotating)
         {
             float mouseX = Input.GetAxis("Mouse X") * rotationSpeed;
+            float mouseY = Input.GetAxis("Mouse Y") * rotationSpeed;
             Vector3 eulerAngleDelta = new Vector3(0f, mouseX, 0f);
             Quaternion rotationDelta = Quaternion.Euler(eulerAngleDelta);
             transform.rotation *= rotationDelta;
+
+            if (isInverted)
+            {
+                mouseY = -mouseY;
+            }
+            Vector3 currentRotation = transform.eulerAngles;
+            transform.eulerAngles = currentRotation;
         }
 
     }

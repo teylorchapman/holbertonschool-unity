@@ -10,6 +10,8 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
+        OptionsMenu._previousSceneName = SceneManager.GetActiveScene().buildIndex;
+
         SceneManager.LoadScene("Options");
         
     }
