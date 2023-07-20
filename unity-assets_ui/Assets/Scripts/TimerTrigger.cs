@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TimerTrigger : MonoBehaviour
@@ -9,8 +7,8 @@ public class TimerTrigger : MonoBehaviour
         Timer timer = other.GetComponent<Timer>();
         
         if (timer != null)
-            {
-                timer.enabled = true;
-            }
+        {
+            timer.enabled = true;
+        }
     }
 }
