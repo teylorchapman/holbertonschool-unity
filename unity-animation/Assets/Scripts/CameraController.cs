@@ -11,11 +11,12 @@ public class CameraController : MonoBehaviour
     private Vector3 offset;
     private bool isRotating;
     public bool isInverted = false;
+    private Quaternion initialRotation;
     
-
     private void Start()
     {
         offset = transform.position - player.position;
+        initialRotation = transform.rotation;
     }
 
     private void Update()
@@ -51,9 +52,8 @@ public class CameraController : MonoBehaviour
             {
                 mouseY = -mouseY;
             }
-            Vector3 currentRotation = transform.eulerAngles;
-            transform.eulerAngles = currentRotation;
-        }
 
+            Vector3 currentRotation = transform.eulerAngles;
+        }
     }
 }

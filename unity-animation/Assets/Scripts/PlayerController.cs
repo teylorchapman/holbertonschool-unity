@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
+    public float rotationalSpeed = 100f;
     public Vector3 startPosition;
 
     private Rigidbody prb;
@@ -21,6 +22,10 @@ public class PlayerController : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
+
+        float horizontalRotation = moveHorizontal;
+        
+        transform.Rotate(0f, horizontalRotation * rotationalSpeed * Time.deltaTime, 0f);
 
         Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical) * moveSpeed;
         prb.AddForce(movement);
