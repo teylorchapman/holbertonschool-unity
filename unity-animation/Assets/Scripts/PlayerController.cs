@@ -5,12 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float runSpeedMultiplier = 1.5f;
     public float jumpForce = 5f;
     public float rotationalSpeed = 100f;
     public Vector3 startPosition;
 
     private Rigidbody prb;
     private bool canMove = false;
+    private bool isRunning = false;
 
     private void Start()
     {
@@ -31,6 +33,12 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, horizontalRotation * rotationalSpeed * Time.deltaTime, 0f);
 
         Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical) * moveSpeed;
+
+        if (isRunning)
+        {
+            movement *= runSpeedMultiplier;
+        }
+        
         prb.AddForce(movement);
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -64,5 +72,10 @@ public class PlayerController : MonoBehaviour
     public void DisableMovement()
     {
         canMove = false;
+    }
+
+    public void SetRunning(bool isRunning)
+    {
+        this.isRunning = isRunning;
     }
 }
