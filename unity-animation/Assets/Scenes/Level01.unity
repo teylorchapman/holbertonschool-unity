@@ -2378,6 +2378,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7147711706465454811, guid: f4b66dd1c498681418ced8886aa3e26f, type: 3}
+--- !u!1 &823149772 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7227438530903097034, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+  m_PrefabInstance: {fileID: 2855554197470139110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &835457389
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,6 +3040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a5d48ea72237d747bccbffd44a9e510, type: 3}
+--- !u!1 &992447808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2863369721367194786, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+  m_PrefabInstance: {fileID: 2855554197470139110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1005196538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7027,6 +7037,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8678aaae3e13c4d499371d3924dc7b77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCamera: {fileID: 1376101241}
+  player: {fileID: 992447808}
+  timerCanvas: {fileID: 823149772}
 --- !u!1 &2144970193
 GameObject:
   m_ObjectHideFlags: 0
@@ -7208,7 +7221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4401560562607226262, guid: 9ded794d9e9775042b74329512210e06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 0.83
       objectReference: {fileID: 0}
     - target: {fileID: 4401560562607226262, guid: 9ded794d9e9775042b74329512210e06, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7258,6 +7271,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1376101247}
+    - target: {fileID: 8559762619189657238, guid: 9ded794d9e9775042b74329512210e06, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 73ac93d876957164498e13c35438d747, type: 2}
     - target: {fileID: 9191849340645332688, guid: 9ded794d9e9775042b74329512210e06, type: 3}
       propertyPath: m_Height
       value: 9.61

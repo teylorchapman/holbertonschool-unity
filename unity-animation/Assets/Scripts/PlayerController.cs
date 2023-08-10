@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 startPosition;
 
     private Rigidbody prb;
+    private bool canMove = false;
 
     private void Start()
     {
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (!canMove) return;
+        
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -51,5 +54,15 @@ public class PlayerController : MonoBehaviour
         prb.velocity = Vector3.zero;
         prb.angularVelocity = Vector3.zero;
         transform.position = startPosition;
+    }
+
+    public void EnableMovement()
+    {
+        canMove = true;
+    }
+
+    public void DisableMovement()
+    {
+        canMove = false;
     }
 }

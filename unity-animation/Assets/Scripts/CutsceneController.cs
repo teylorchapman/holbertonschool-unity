@@ -6,14 +6,24 @@ public class CutsceneController : MonoBehaviour
     public GameObject player;
     public GameObject timerCanvas;
 
-    private bool _cutsceneFinished;
+    private bool _cutsceneFinished = false;
 
     private void Start()
     {
-        player.GetComponent<PlayerController>().enabled = false;
+        player.GetComponent<PlayerController>().DisableMovement();
         timerCanvas.SetActive(false);
     }
-
+    
+    public void CutsceneAnimationFinished()
+    {
+        _cutsceneFinished = true;
+        mainCamera.SetActive(true);
+        player.GetComponent<PlayerController>().EnableMovement();
+        timerCanvas.SetActive(true);
+        
+        gameObject.SetActive(false);
+    }
+    
     private void Update()
     {
         if (_cutsceneFinished && Vector3.Distance(mainCamera.transform.position, player.transform.position) < 1f)
@@ -21,14 +31,4 @@ public class CutsceneController : MonoBehaviour
             timerCanvas.SetActive(true);
         }
     }
-
-    public void CutsceneAnimationFinished()
-    {
-        mainCamera.SetActive(true);
-        player.GetComponent<PlayerController>().enabled = true;
-        timerCanvas.SetActive(true);
-        
-        gameObject.SetActive(false);
-    }
-    
 }
