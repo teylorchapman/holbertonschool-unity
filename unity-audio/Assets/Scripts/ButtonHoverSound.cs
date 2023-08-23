@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
+public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
 {
     public AudioClip hoverSoundClip;
+    public AudioClip clickSoundClip;
     private AudioSource audioSource;
 
     private void Start()
@@ -14,5 +15,10 @@ public class ButtonHoverSound : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         audioSource.PlayOneShot(hoverSoundClip);
+    }
+    
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        audioSource.PlayOneShot(clickSoundClip);
     }
 }
