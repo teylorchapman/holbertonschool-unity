@@ -1,9 +1,10 @@
 fileFormatVersion: 2
-guid: 59a8fb5b6bb946b4cbd90a14a55c13c9
+guid: e8849951c1554f244b2ad4949a880342
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - hoverSoundClip: {fileID: 8300000, guid: 190360142c6b28b49a840e6a3ca55937, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
