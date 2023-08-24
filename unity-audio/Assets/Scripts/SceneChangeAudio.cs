@@ -20,6 +20,5 @@ public class SceneChangeAudio : MonoBehaviour
 
     private void OnDestroy()
     {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
+        SceneManager.sceneLoaded -= OnSceneLoaded; }
 }
