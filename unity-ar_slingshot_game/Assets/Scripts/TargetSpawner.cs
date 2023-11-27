@@ -32,6 +32,7 @@ public class TargetSpawner : MonoBehaviour
         for (int x = 0; x < numberOftargets; x++)
         {
             Vector3 location = GetRandoLocationWithinTheBounds(plane);
+            Debug.Log("Spawn Location: " + location);
             GameObject target = Instantiate(theTargets, location, Quaternion.identity);
         }
     }

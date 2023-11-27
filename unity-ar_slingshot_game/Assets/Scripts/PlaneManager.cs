@@ -7,16 +7,19 @@ public class PlaneManager : MonoBehaviour
     public ARPlane thePlane;
 
     public GameObject startB;
-    private ARPlane plane;
+
+    private bool hasSelectedPlane;
    
     void Awake()
     {
+        thePlane = null;
+        hasSelectedPlane = false;
         startB.SetActive(false);
     }
 
    void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !hasSelectedPlane)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -28,10 +31,12 @@ public class PlaneManager : MonoBehaviour
                 {
                     Debug.Log("Raycast hit: " + hit.transform.name);
                     ARPlane plane = hit.transform.GetComponent<ARPlane>();
-                    if (plane != null && thePlane == null)
-                    {
+                    thePlane = plane;
+                    ///if (plane != null && thePlane == null)
+                    ///{
                         SelectPlane();
-                    }
+                        hasSelectedPlane = true;
+                    ///}
                 }
             }
         }
@@ -39,16 +44,8 @@ public class PlaneManager : MonoBehaviour
 
     public ARPlane SelectPlane()
     {
-        if (thePlane != null)
-        {
-            Debug.Log("Plane already selected: " + thePlane.name);
-            return thePlane;
-        }
-
-        
-        Debug.Log("Selected Plane: " + thePlane);
         thePlaneManager.enabled = false;
         startB.SetActive(true);
-        return(plane);
+        return(thePlane);
     }
 }
