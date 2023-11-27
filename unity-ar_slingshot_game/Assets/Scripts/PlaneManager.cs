@@ -4,10 +4,11 @@ using UnityEngine.XR.ARFoundation;
 public class PlaneManager : MonoBehaviour
 {
     public ARPlaneManager thePlaneManager;
-    private ARPlane thePlane;
+    public ARPlane thePlane;
 
-    private GameObject startB;
-
+    public GameObject startB;
+    private ARPlane plane;
+   
     void Awake()
     {
         startB.SetActive(false);
@@ -21,29 +22,26 @@ public class PlaneManager : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
+                Debug.Log("Touch Began");
+                int layerMask = 1 << LayerMask.NameToLayer("AR Plane");
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out RaycastHit hit))
                 {
+                    Debug.Log("Raycast hit: " + hit.transform.name);
                     ARPlane plane = hit.transform.GetComponent<ARPlane>();
                     if (plane != null && thePlane == null)
                     {
-                        SelectPlane(plane);
+                        SelectPlane();
                     }
                 }
             }
         }
     }
 
-    private void SelectPlane(ARPlane plane)
+    public ARPlane SelectPlane()
     {
-        if (thePlane != null)
-        {
-
-        }
-
-        thePlane = plane;
-
+        Debug.Log("Selected Plane: " + thePlane);
         thePlaneManager.enabled = false;
-
         startB.SetActive(true);
+        return(plane);
     }
 }
