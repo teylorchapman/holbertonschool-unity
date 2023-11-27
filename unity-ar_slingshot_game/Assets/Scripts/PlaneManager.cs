@@ -39,6 +39,13 @@ public class PlaneManager : MonoBehaviour
 
     public ARPlane SelectPlane()
     {
+        if (thePlane != null)
+        {
+            Debug.Log("Plane already selected: " + thePlane.name);
+            return thePlane;
+        }
+
+        
         Debug.Log("Selected Plane: " + thePlane);
         thePlaneManager.enabled = false;
         startB.SetActive(true);
