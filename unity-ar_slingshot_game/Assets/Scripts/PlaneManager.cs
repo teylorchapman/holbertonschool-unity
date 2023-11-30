@@ -25,11 +25,9 @@ public class PlaneManager : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                Debug.Log("Touch Began");
                 int layerMask = 1 << LayerMask.NameToLayer("AR Plane");
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(touch.position), out RaycastHit hit))
                 {
-                    Debug.Log("Raycast hit: " + hit.transform.name);
                     ARPlane plane = hit.transform.GetComponent<ARPlane>();
                     thePlane = plane;
                     ///if (plane != null && thePlane == null)
